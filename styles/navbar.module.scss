@@ -1,0 +1,56 @@
+.nav {
+  max-width: 1000px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem auto;
+
+  .logo__container {
+    width: 50px;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+
+  .nav__items {
+    width: 400px;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .nav__cta {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      padding: 0.8rem 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+  }
+}
