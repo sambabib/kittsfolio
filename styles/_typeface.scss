@@ -32,14 +32,14 @@
 }
 
 @font-face {
-    font-family: 'Hkgrotesk, sans-serif';
-    src: url('../public/fonts/HKGrotesk-SemiBold.otf') format('opentype');
-    src: url('../public/fonts/HKGrotesk-SemiBold.ttf') format('truetype');
-    src: url('../public/fonts/HKGrotesk-SemiBold.woff') format('woff');
-    src: url('../public/fonts/HKGrotesk-SemiBold.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Hkgrotesk, sans-serif';
+  src: url('../public/fonts/HKGrotesk-SemiBold.otf') format('opentype');
+  src: url('../public/fonts/HKGrotesk-SemiBold.ttf') format('truetype');
+  src: url('../public/fonts/HKGrotesk-SemiBold.woff') format('woff');
+  src: url('../public/fonts/HKGrotesk-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -49,6 +49,17 @@
   src: url('../public/fonts/HKGrotesk-Bold.woff') format('woff');
   src: url('../public/fonts/HKGrotesk-Bold.woff2') format('woff2');
   font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HKgrotesk, sans-serif';
+  src: url('../public/fonts/HKGrotesk-Black.otf') format('opentype');
+  src: url('../public/fonts/HKGrotesk-Black.ttf') format('truetype');
+  src: url('../public/fonts/HKGrotesk-Black.woff') format('woff');
+  src: url('../public/fonts/HKGrotesk-Black.woff2') format('woff2');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }

@@ -1,10 +1,13 @@
+// importing partials
+@import 'variable';
+
 .nav {
   max-width: 1000px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0.5rem auto;
+  margin: 2rem auto;
 
   .logo__container {
     width: 50px;
@@ -14,13 +17,14 @@
     align-items: center;
 
     p {
-      font-size: 2rem;
-      font-weight: 700;
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: -2px;
     }
   }
 
   .nav__items {
-    width: 400px;
+    width: 340px;
     height: inherit;
     display: flex;
     flex-direction: column;
@@ -33,8 +37,21 @@
       justify-content: space-between;
 
       li {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         font-weight: 500;
+        padding: 0.4rem 0.9rem;
+        background: transparent;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+        letter-spacing: -1px;
+
+        &:hover {
+          background: $primary-blue;
+          font-size: 0.8rem;
+          color: #fff;
+          border-radius: 4px;
+        }
       }
     }
   }
@@ -51,6 +68,19 @@
       align-items: center;
       gap: 0.5rem;
       cursor: pointer;
+      border: none;
+      background: $background-primary;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      font-family: $font-htgrotesk !important;
+      transition: all 0.3s ease-in;
+      letter-spacing: -1px;
+
+      &:hover {
+        background: $primary-blue;
+        color: $background-main;
+      }
     }
   }
 }

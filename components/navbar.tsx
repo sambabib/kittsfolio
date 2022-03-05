@@ -10,12 +10,13 @@ const Navbar = (): ReactElement => {
   return (
     <div className={styles.nav}>
       <div className={styles.logo__container}>
-        <p>ki.</p>
+        <p>aa.</p>
       </div>
       <div className={styles.nav__items}>
         <ul>
           <li>About</li>
           <li>Work & Stuff</li>
+          <li>Articles</li>
           <li>Resume</li>
         </ul>
       </div>
