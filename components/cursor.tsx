@@ -48,7 +48,7 @@ const Cursor = (): ReactElement => {
     toggleCursorSize();
   };
 
-  const mouseEnterEvent = (): void=> {
+  const mouseEnterEvent = (): void => {
     cursorVisible.current = true;
     toggleCursorVisibility();
   };
@@ -100,7 +100,14 @@ const Cursor = (): ReactElement => {
 
       cancelAnimationFrame(requestRef.current);
     };
-  }, []);
+  }, [
+    animateDotOutline,
+    mouseEnterEvent,
+    mouseLeaveEvent,
+    mouseMoveEvent,
+    mouseOutEvent,
+    mouseOverEvent,
+  ]);
 
   return (
     <>

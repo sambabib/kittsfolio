@@ -22,22 +22,22 @@ const Navbar = (): ReactElement => {
         }}
       >
         <div className={styles.logo__container}>
-          <Link href='/'>
+          <Link href='/' passHref>
             <p>aa.</p>
           </Link>
         </div>
         <div className={styles.nav__items}>
           <ul>
-            <Link href='/about'>
+            <Link href='/about' passHref>
               <li>About</li>
             </Link>
-            <Link href='/work-and-stuff'>
+            <Link href='/work-and-stuff' passHref>
               <li>Work & Stuff</li>
             </Link>
-            <Link href='/articles'>
+            <Link href='/articles' passHref>
               <li>Articles</li>
             </Link>
-            <Link href='/resume'>
+            <Link href='/resume' passHref>
               <li>Resume</li>
             </Link>
           </ul>

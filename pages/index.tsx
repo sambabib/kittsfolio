@@ -75,7 +75,7 @@ const Home = () => {
                     delay: 2,
                   }}
                 >
-                  My name's Adekite.
+                  My name&lsquo;s Adekite.
                 </motion.h2>
                 <motion.p
                   initial={{ opacity: 0, y: 80 }}
@@ -88,7 +88,7 @@ const Home = () => {
                 >
                   I am a <span>frontend engineer</span> living in Lagos,
                   Nigeria. I love <span>sitcoms</span> & <span>sports</span>.
-                  I'm also really fascinated by web3, smart doggos, art & gym
+                  I&lsquo;m also really fascinated by web3, smart doggos, art & gym
                   heads. Yo hablo un poco de <span>espano</span>l!
                 </motion.p>
               </motion.section>

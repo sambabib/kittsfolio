@@ -40,7 +40,7 @@ const About = (): ReactElement => {
                 delay: 2.4,
               }}
             >
-              Okay. You already know a number of things about me. Here's some
+              Okay. You already know a number of things about me. Here&lsquo;s some
               more stuff: <br />
             </motion.p>
             <motion.p
@@ -56,9 +56,9 @@ const About = (): ReactElement => {
               Javascript, Typescript, React, Nextjs, Vue. I also write some
               Flutter/Dart. <br /> I have worked as a{' '}
               <span>Fullstack developer</span> building an erp software, an
-              e-learning app as well as CMS to manage it's content. I hope to
+              e-learning app as well as CMS to manage it&lsquo;s content. I hope to
               wrap up a Solidity course in the coming months (yay web3!) <br />{' '}
-              When I'm not writing code, I'm fan-boying Lebron James, listening
+              When I&lsquo;m not writing code, I&lsquo;m fan-boying Lebron James, listening
               to some pretty decent music, having a good laugh with sitcoms,{' '}
               <span>eating oreo</span> or painting rainbows in the sky.
             </motion.p>
@@ -75,7 +75,7 @@ const About = (): ReactElement => {
             className={styles.my__shit__intro}
           >
             <h4>
-              It's difficult to share all the things I absolutely love on one
+              It&lsquo;s difficult to share all the things I absolutely love on one
               page, so here are two of my favorite albums & two of my favorite
               tv shows:
             </h4>
@@ -134,7 +134,7 @@ const About = (): ReactElement => {
                 delay: 3.5,
               }}
             >
-              Think I'm awesome? <br />{' '}
+              Think I&lsquo;m awesome? <br />{' '}
               <motion.span
                 initial={{ opacity: 0, x: 80 }}
                 animate={{ opacity: 1, x: 0 }}
