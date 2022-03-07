@@ -41,29 +41,83 @@
 
     .my__shit {
       display: flex;
-      flex-direction: column;
       gap: 2rem;
-      max-width: 500px;
+      max-width: 800px;
       margin: 0 auto;
 
       .my__music__container,
       .my__sitcoms__container {
         display: flex;
         flex-direction: column;
+        width: 50%;
         gap: 1rem;
         padding: 1.5rem 1.8rem;
         background: $background-secondary;
         border-radius: 16px;
       }
     }
+
+    .connect {
+      display: flex;
+      justify-content: flex-end;
+      text-align: right;
+      margin: 0.9rem 0;
+      transition: all 0.3s ease;
+
+      h3 {
+        font-size: 0.85rem;
+        letter-spacing: -1px;
+        font-weight: 400;
+
+        span {
+          font-weight: 700 !important;
+          color: rgba($color: $text-main, $alpha: 0.3);
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 0.2rem 0;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          .icon {
+            animation: bounce 2s ease infinite;
+          }
+        }
+
+        @keyframes bounce {
+          0%,
+          25%,
+          55%,
+          75%,
+          100% {
+            transform: translateX(0);
+          }
+
+          45% {
+            transform: translateX(-10px);
+          }
+
+          65% {
+            transform: translateX(-5px);
+          }
+
+          85% {
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
   }
 
   .about__background {
-    height: 300px;
+    height: 120px;
     width: 100%;
     position: fixed;
-    bottom: -200px;
-    right: 600px;
+    bottom: -140px;
+    left: -520px;
     transform: rotateZ(90deg);
 
     p {

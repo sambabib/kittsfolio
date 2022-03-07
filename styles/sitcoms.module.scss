@@ -13,8 +13,8 @@
     cursor: pointer;
 
     &:hover {
-      background: $primary-blue;
       color: $background-main;
+      background: $primary-purple;
     }
 
     .num__and__title {
@@ -35,7 +35,7 @@
     }
 
     .type {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       font-weight: 700;
     }
   }
