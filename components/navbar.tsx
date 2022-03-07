@@ -8,7 +8,7 @@ import { FiSend } from 'react-icons/fi';
 
 const Navbar = (): ReactElement => {
   return (
-    <div className={styles.nav}>
+    <nav className={styles.nav}>
       <div className={styles.logo__container}>
         <p>aa.</p>
       </div>
@@ -25,7 +25,7 @@ const Navbar = (): ReactElement => {
           <FiSend /> Connect with me
         </button>
       </div>
-    </div>
+    </nav>
   );
 };
 
