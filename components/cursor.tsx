@@ -10,12 +10,8 @@ const Cursor = (): ReactElement => {
   const cursorVisible = useRef<boolean>(true);
   const cursorEnlarged = useRef<boolean>(false);
 
-  if (typeof window !== 'undefined') {
-    //   bypassing window error
-  }
-
-  const endX = useRef<number>(window.innerWidth / 2);
-  const endY = useRef<number>(window.innerHeight / 2);
+  const endX = useRef<number>(0);
+  const endY = useRef<number>(0);
 
   const _x = useRef<number>(0);
   const _y = useRef<number>(0);
