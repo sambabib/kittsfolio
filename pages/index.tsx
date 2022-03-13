@@ -101,7 +101,7 @@ const Home = () => {
                 >
                   stack:
                 </motion.h4>
-                <motion.section variants={container}>
+                <motion.section variants={container} >
                   {[...stack].map((item) => (
                     <StackItem key={item.id} title={item.title} />
                   ))}

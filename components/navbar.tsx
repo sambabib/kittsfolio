@@ -31,7 +31,7 @@ const Navbar = (): ReactElement => {
             <Link href='/about' passHref>
               <li>About</li>
             </Link>
-            <Link href='/work-and-stuff' passHref>
+            <Link href='/work' passHref>
               <li>Work & Stuff</li>
             </Link>
             <Link href='/articles' passHref>
