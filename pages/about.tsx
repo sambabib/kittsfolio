@@ -47,7 +47,7 @@ const About = (): ReactElement => {
               delay: 2,
             }}
           >
-            About
+            About.
           </motion.h2>
           <section className={styles.section}>
             <motion.p variants={fadeAbout} initial='hidden' animate='visible'>

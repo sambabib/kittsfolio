@@ -1,0 +1,29 @@
+// partials
+@import 'variable';
+
+.work {
+  position: relative;
+
+  .work__container {
+    max-width: 900px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.3rem;
+      font-weight: 900;
+      letter-spacing: -4px !important;
+    }
+
+    .work__projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+
+      .title {
+          grid-column: 3;
+        //   border: 1px solid purple;
+          margin: 1rem 0;
+      }
+    }
+  }
+}
