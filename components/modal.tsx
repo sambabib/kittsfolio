@@ -4,7 +4,7 @@ import type { ReactElement } from 'react';
 import styles from '../styles/modal.module.scss';
 
 // icons
-import { FiCode, FiLink, FiX } from 'react-icons/fi';
+import { FiCode, FiLink, FiX, FiArrowLeft } from 'react-icons/fi';
 
 interface ModalProps {
   item: any;
@@ -17,7 +17,7 @@ const Modal = ({ item, open, setOpen }: ModalProps): ReactElement => {
     <div className={styles.modal}>
       <div className={styles.modal__container}>
         <button className={styles.close__button} onClick={() => setOpen(!open)}>
-          <FiX className={styles.close} />
+          <FiArrowLeft />
         </button>
         <div className={styles.inner__modal}>
           <div className={styles.heading}>
