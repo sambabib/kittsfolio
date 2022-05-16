@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { ReactElement } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
@@ -36,6 +37,10 @@ const fadeAbout: {} = {
 const About = (): ReactElement => {
   return (
     <AnimatePresence exitBeforeEnter>
+      <Head>
+        <title>Kite | Folio - About</title>
+        <meta name='description' content='Kittsfolio About page' />
+      </Head>
       <div className={styles.about}>
         <motion.div className={styles.about__container} variants={stagger}>
           <motion.h2
@@ -68,19 +73,6 @@ const About = (): ReactElement => {
             </motion.p>
           </section>
 
-          <motion.div
-            className={styles.my__shit__intro}
-            variants={fadeAbout}
-            initial='hidden'
-            animate='visible'
-          >
-            <h4>
-              It&lsquo;s difficult to share all the things I absolutely love on
-              one page, so here are two of my favorite albums & two of my
-              favorite tv shows:
-            </h4>
-          </motion.div>
-
           <section className={styles.connect}>
             <motion.h3
               initial={{ opacity: 0, x: 80 }}
@@ -109,7 +101,7 @@ const About = (): ReactElement => {
 
         <section className={styles.about__background}>
           <motion.p
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 0.1, x: 0 }}
             transition={{ ease: 'easeInOut', delay: 1, duration: 1 }}
           >

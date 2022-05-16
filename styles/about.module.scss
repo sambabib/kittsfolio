@@ -115,10 +115,10 @@
   .about__background {
     height: 120px;
     width: 100%;
-    position: fixed;
-    bottom: -140px;
-    left: -520px;
-    transform: rotateZ(90deg);
+    height: 300px;
+    width: 100%;
+    bottom: 0;
+    // transform: rotateZ(90deg);
 
     p {
       font-size: 7.8rem;

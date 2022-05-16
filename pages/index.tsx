@@ -57,7 +57,10 @@ const Home = () => {
 
   return (
     <>
-      <Head>Kite | Folio</Head>
+      <Head>
+        <title>Kite | Folio</title>
+        <meta name="description" content="Kittsfolio Homepage" />
+      </Head>
       <AnimatePresence>
         <div className={styles.home}>
           <section className={styles.home__section}>
