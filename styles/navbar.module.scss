@@ -3,11 +3,12 @@
 
 .nav {
   max-width: 1000px;
-  height: 60px;
+  height: 62px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 2rem auto;
+  padding: 0 .8rem;
 
   .logo__container {
     width: 50px;
@@ -42,19 +43,19 @@
       padding: 0;
 
       li {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         font-weight: 500;
         padding: 0.4rem 0.9rem;
         background: transparent;
         border-radius: 4px;
         cursor: pointer;
         transition: all 0.3s ease-out;
-        letter-spacing: -1px;
+        letter-spacing: -0.5px;
 
         &:hover {
-          background: $primary-blue;
+          background: $text-main;
           padding: 0.4rem 0.9rem;
-          font-size: 0.85rem;
+          font-size: 0.8rem;
           color: #fff;
           border-radius: 4px;
         }
@@ -75,17 +76,18 @@
       gap: 0.5rem;
       cursor: pointer;
       border: none;
-      background: $background-primary;
+      background: transparent;
+      background: $text-main;
+      color: $background-main;
       border-radius: 4px;
       font-size: 0.8rem;
       font-weight: 500;
       font-family: $font-htgrotesk !important;
       transition: all 0.3s ease-in;
-      letter-spacing: -1px;
+      letter-spacing: -0.5px;
 
       &:hover {
-        background: $primary-blue;
-        color: $background-main;
+        background: rgba($text-main, 0.85);
       }
     }
   }

@@ -19,24 +19,22 @@ const ProjectCard = ({ item }: CardProps): ReactElement => {
 
   return (
     <>
-      <div className={styles.projects__card}>
-        <div
-          className={styles.projects__card__container}
-          onClick={() => setOpen(!open)}
-        >
-          <div className={styles.card__heading}>
-            <h3>{item.title}</h3>
-            <p>{item.tags.join(' + ')}</p>
+      <div
+        className={styles.projects__card__container}
+        onClick={() => setOpen(!open)}
+      >
+        <div className={styles.card__heading}>
+          <h3>{item.title}</h3>
+          <p>{item.tags.join(' + ')}</p>
+        </div>
+        <div className={styles.card__details}>
+          <div className={styles.live}>
+            <FiLink />
+            <a href={item.live}>Live</a>
           </div>
-          <div className={styles.card__details}>
-            <div className={styles.live}>
-              <FiLink />
-              <a href={item.live}>Live</a>
-            </div>
-            <div className={styles.code}>
-              <FiCode />
-              <a href={item.code}>Code</a>
-            </div>
+          <div className={styles.code}>
+            <FiCode />
+            <a href={item.code}>Code</a>
           </div>
         </div>
       </div>

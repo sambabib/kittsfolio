@@ -1,10 +1,10 @@
 // partials
 @import 'variable';
 
-.work {
+.articles {
   position: relative;
 
-  .work__container {
+  .articles__container {
     max-width: 900px;
     margin: 0 auto;
     z-index: 10;
@@ -15,7 +15,7 @@
       letter-spacing: -4px !important;
     }
 
-    .work__projects {
+    .articles__posts {
       width: 100%;
       display: flex;
       flex-wrap: wrap;

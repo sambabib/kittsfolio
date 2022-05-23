@@ -5,32 +5,33 @@ import type { ReactElement } from 'react';
 import Layout from '../components/layout';
 import ProjectCard from '../components/projectCard';
 
+import { motion, AnimatePresence } from 'framer-motion';
+
 // styling
 import styles from '../styles/work.module.scss';
 
 // utils
 import { projectData } from '../utils/projects';
 
-const Work = () => {
+const Work = (): ReactElement => {
   return (
-    <>
+    <AnimatePresence>
       <Head>
         <title>Kite | Folio - Work</title>
         <meta name='description' content='Kittsfolio Work page' />
       </Head>
-      <div className={styles.work}>
+      <motion.div className={styles.work}>
         <div className={styles.work__container}>
           <h2>Work & Stuff.</h2>
 
-          <section className={styles.work__projects}>
-            <h3 className={styles.title}></h3>
+          <div className={styles.work__projects}>
             {projectData.map((item) => (
-              <ProjectCard key={item.id} item={item} />
+              <ProjectCard item={item} key={item.id} />
             ))}
-          </section>
+          </div>
         </div>
-      </div>
-    </>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

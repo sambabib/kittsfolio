@@ -72,42 +72,7 @@ const About = (): ReactElement => {
               in the sky.
             </motion.p>
           </section>
-
-          <section className={styles.connect}>
-            <motion.h3
-              initial={{ opacity: 0, x: 80 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                ease: [0.6, 0.01, -0.05, 0.95],
-                duration: 1,
-                delay: 2.0,
-              }}
-            >
-              Think I&lsquo;m awesome? <br />{' '}
-              <motion.span
-                initial={{ opacity: 0, x: 80 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{
-                  ease: [0.6, 0.01, -0.05, 0.95],
-                  duration: 1,
-                  delay: 2.3,
-                }}
-              >
-                Connect with me <FiArrowRight className={styles.icon} />
-              </motion.span>
-            </motion.h3>
-          </section>
         </motion.div>
-
-        <section className={styles.about__background}>
-          <motion.p
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 0.1, x: 0 }}
-            transition={{ ease: 'easeInOut', delay: 1, duration: 1 }}
-          >
-            Como Estas?
-          </motion.p>
-        </section>
       </div>
     </AnimatePresence>
   );

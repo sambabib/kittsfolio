@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import type { ReactElement } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
@@ -6,19 +7,27 @@ import Link from 'next/link';
 import styles from '../styles/navbar.module.scss';
 
 // icons
-import { FiSend } from 'react-icons/fi';
+import { FiArrowDownRight } from 'react-icons/fi';
+import Connect from '../components/connect';
+import Resume from '../components/resume';
 
-const Navbar = (): ReactElement => {
+interface navProps {
+  onMouseEnter?: () => void;
+}
+
+const Navbar: React.FC<navProps> = ({
+  onMouseEnter,
+}: navProps): ReactElement => {
+  const [hover, setHover] = useState<boolean>(false);
+  const [showResume, setShowResume] = useState<boolean>(false);
+
   return (
     <AnimatePresence>
       <motion.nav
         className={styles.nav}
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          ease: 'easeInOut',
-          duration: 1,
-          delay: 1.6,
+        onMouseLeave={() => {
+          setHover(false);
+          setShowResume(false);
         }}
       >
         <div className={styles.logo__container}>
@@ -38,15 +47,18 @@ const Navbar = (): ReactElement => {
               <li>Articles</li>
             </Link>
             <Link href='/resume' passHref>
-              <li>Resume</li>
+              <li onMouseEnter={() => setShowResume(true)}>Resume</li>
             </Link>
           </ul>
         </div>
         <div className={styles.nav__cta}>
-          <button type='button'>
-            <FiSend /> Connect with me
+          <button type='button' onMouseEnter={() => setHover(true)}>
+            Connect with me <FiArrowDownRight />
           </button>
         </div>
+
+        {hover && <Connect setHover={setHover} />}
+        {showResume && <Resume />}
       </motion.nav>
     </AnimatePresence>
   );

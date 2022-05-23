@@ -1,7 +1,7 @@
 // partials
 @import 'variable';
 
-.projects__card__container {
+.posts__card__container {
   display: flex;
   flex-direction: column;
   gap: 3.4rem;
@@ -11,36 +11,30 @@
   cursor: pointer;
 
   &:hover {
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     background: $background-secondary;
   }
 
   .card__heading {
-    h3 {
-      font-size: 1.8rem;
-      letter-spacing: -2px;
-    }
+    width: 200px;
 
-    p {
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-top: -1.5rem;
-      letter-spacing: -1px;
+    h3 {
+      font-size: 1.1rem;
+      letter-spacing: -2px;
     }
   }
 
-  .card__details {
+  .card__date {
+    width: fit-content;
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    letter-spacing: -1px;
+    gap: 4px;
 
-    .live,
-    .code {
-      display: flex;
-      align-items: center;
-      font-size: 0.85rem;
+    p {
+      font-size: 0.75rem;
+      font-weight: 600;
       letter-spacing: -1px;
-      gap: 4px;
     }
   }
 }

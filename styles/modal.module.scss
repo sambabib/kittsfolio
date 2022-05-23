@@ -31,6 +31,14 @@
       background: transparent;
       border: 4px solid $background-tertiary;
       cursor: pointer;
+
+      &:hover {
+        background: $text-main;
+        color: $background-main;
+        border: 4px solid $text-main;
+        transition: all .4s ease-in-out;
+
+      }
     }
 
     .inner__modal {
@@ -86,6 +94,7 @@
       a {
         font-size: 0.85rem;
         letter-spacing: -1px;
+        text-decoration: underline;
       }
 
       .icon {
@@ -98,13 +107,18 @@
     .live {
       font-size: 0.85rem;
       margin-top: 1rem;
-      background: $primary-blue;
+      background: $text-main;
       color: $background-main;
       text-align: center;
       padding: 0.9rem 1.3rem;
       letter-spacing: -1px;
       border-radius: 0 0 16px 16px;
       transition: all .3s ease;
+
+      &:hover {
+        transition: all .3s ease-in-out;
+        background: $primary-blue;
+      }
     }
   }
 }

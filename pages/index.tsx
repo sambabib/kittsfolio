@@ -4,10 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 // components
 import Layout from '../components/layout';
-
-// utils
-import { stack } from '../utils/stack';
-import StackItem from '../utils/stackItem';
+import Fab from '../components/fab';
 
 // styles
 import styles from '../styles/home.module.scss';
@@ -59,7 +56,7 @@ const Home = () => {
     <>
       <Head>
         <title>Kite | Folio</title>
-        <meta name="description" content="Kittsfolio Homepage" />
+        <meta name='description' content='Kittsfolio Homepage' />
       </Head>
       <AnimatePresence>
         <div className={styles.home}>
@@ -91,26 +88,12 @@ const Home = () => {
                 >
                   I am a <span>frontend engineer</span> living in Lagos,
                   Nigeria. I love <span>sitcoms</span> & <span>sports</span>.
-                  I&lsquo;m also really fascinated by web3, smart doggos, art & gym
-                  heads. Yo hablo un poco de <span>espano</span>l!
+                  I&lsquo;m also really fascinated by web3, smart doggos, art &
+                  gym heads. Yo hablo un poco de <span>espano</span>l!
                 </motion.p>
               </motion.section>
-
-              <motion.section variants={container} className={styles.stack}>
-                <motion.h4
-                  initial='hidden'
-                  animate='visible'
-                  variants={stackHeading}
-                >
-                  stack:
-                </motion.h4>
-                <motion.section variants={container} >
-                  {[...stack].map((item) => (
-                    <StackItem key={item.id} title={item.title} />
-                  ))}
-                </motion.section>
-              </motion.section>
             </article>
+            <Fab />
           </section>
           <motion.section
             initial='hidden'
