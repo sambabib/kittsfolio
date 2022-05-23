@@ -24,7 +24,7 @@ const Articles = (): ReactElement => {
 
           <div className={styles.articles__posts}>
             {posts.map((item) => (
-              <BlogPostsCard item={item} />
+              <BlogPostsCard item={item} key={item.id} />
             ))}
           </div>
         </div>
