@@ -30,11 +30,11 @@ const ProjectCard = ({ item }: CardProps): ReactElement => {
         <div className={styles.card__details}>
           <div className={styles.live}>
             <FiLink />
-            <a href={item.live}>Live</a>
+            Live
           </div>
           <div className={styles.code}>
             <FiCode />
-            <a href={item.code}>Code</a>
+            Code
           </div>
         </div>
       </div>
