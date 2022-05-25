@@ -5,21 +5,39 @@
   position: absolute;
   width: 170px;
   right: 17.5%;
-  top: 12%;
+  top: 13%;
   background: $background-main;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  // border: $background-tertiary;
   transition: all 0.6s ease-in-out;
   z-index: 20;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent $background-tertiary transparent;
+    background: transparent;
+  }
+
+  &:hover::before {
+    background: transparent;
+  }
 
   .connect__container {
     position: relative;
     width: 100%;
+    // border: 1px solid red;
 
     ul {
       list-style: none;
       padding: 0;
       width: 100%;
-  
+
       li {
         font-size: 0.85rem;
         padding: 0.8rem 2rem;
@@ -34,6 +52,7 @@
         }
 
         a {
+          width: inherit !important;
           text-decoration: none;
           display: flex;
           align-items: center;

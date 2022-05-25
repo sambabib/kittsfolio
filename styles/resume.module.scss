@@ -3,7 +3,7 @@
 
 .resume {
   position: absolute;
-  width: 240px;
+  width: 220px;
   left: 50%;
   right: 50%;
   top: 12%;
@@ -11,6 +11,18 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   transition: all 0.6s ease-in-out;
   z-index: 20;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent $background-tertiary transparent;
+    background: transparent;
+  }
 
   .resume__container {
     position: relative;
