@@ -36,8 +36,8 @@ const AnimatedText = ({ title }: TextProps): ReactElement => {
       initial='initial'
       animate='animate'
     >
-      {[...title].map((letter) => (
-        <motion.span className={styles.letters} variants={animateText}>
+      {[...title].map((letter, index) => (
+        <motion.span className={styles.letters} variants={animateText} key={index}>
           {letter.split('').join(' ')}
         </motion.span>
       ))}
