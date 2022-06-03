@@ -25,3 +25,10 @@
   background: transparent;
   border: 1px solid $background-primary;
 }
+
+@media (msx-width: 969px) {
+  .cursor__dot,
+  .cursor__outline {
+    display: none;
+  }
+}
