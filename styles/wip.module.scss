@@ -1,0 +1,23 @@
+// partials
+@import 'variable';
+
+.wip {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  .wip__text {
+    p {
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+
+  .icon, .wip__text > p {
+      color: gray;
+  }
+}

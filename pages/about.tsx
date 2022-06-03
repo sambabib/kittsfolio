@@ -1,10 +1,14 @@
 import Head from 'next/head';
 import type { ReactElement } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiArrowRight } from 'react-icons/fi';
+import { useContext } from 'react';
+
+// utils
+import { viewportContext } from '../utils/viewportlayout';
 
 // components
 import Layout from '../components/layout';
+import Wip from '../components/wip';
 
 // styles
 import styles from '../styles/about.module.scss';
@@ -35,46 +39,62 @@ const fadeAbout: {} = {
 };
 
 const About = (): ReactElement => {
+  const { width }: any = useContext(viewportContext);
+
   return (
-    <AnimatePresence exitBeforeEnter>
-      <Head>
-        <title>Kite | Folio - About</title>
-        <meta name='description' content='Kittsfolio About page' />
-      </Head>
-      <div className={styles.about}>
-        <motion.div className={styles.about__container} variants={stagger}>
-          <motion.h2
-            initial={{ opacity: 0, x: -80 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{
-              ease: 'easeInOut',
-              duration: 1,
-              delay: 2,
-            }}
-          >
-            About.
-          </motion.h2>
-          <section className={styles.section}>
-            <motion.p variants={fadeAbout} initial='hidden' animate='visible'>
-              Okay. You already know a number of things about me. Here&lsquo;s
-              some more stuff: <br />
-            </motion.p>
-            <motion.p variants={fadeAbout} initial='hidden' animate='visible'>
-              Away from building really cool web apps that scale with
-              Javascript, Typescript, React, Nextjs, Vue. I also write some
-              Flutter/Dart. <br /> I have worked as a{' '}
-              <span>Fullstack developer</span> building an erp software, an
-              e-learning app as well as CMS to manage it&lsquo;s content. I hope
-              to wrap up a Solidity course in the coming months (yay web3!){' '}
-              <br /> When I&lsquo;m not writing code, I&lsquo;m fan-boying
-              Lebron James, listening to some pretty decent music, having a good
-              laugh with sitcoms, <span>eating oreo</span> or painting rainbows
-              in the sky.
-            </motion.p>
-          </section>
-        </motion.div>
-      </div>
-    </AnimatePresence>
+    <>
+      {width <= 969 ? (
+        <Wip />
+      ) : (
+        <AnimatePresence exitBeforeEnter>
+          <Head>
+            <title>Kite | Folio - About</title>
+            <meta name='description' content='Kittsfolio About page' />
+          </Head>
+          <div className={styles.about}>
+            <motion.div className={styles.about__container} variants={stagger}>
+              <motion.h2
+                initial={{ opacity: 0, x: -80 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  ease: 'easeInOut',
+                  duration: 1,
+                  delay: 2,
+                }}
+              >
+                About.
+              </motion.h2>
+              <section className={styles.section}>
+                <motion.p
+                  variants={fadeAbout}
+                  initial='hidden'
+                  animate='visible'
+                >
+                  Okay. You already know a number of things about me.
+                  Here&lsquo;s some more stuff: <br />
+                </motion.p>
+                <motion.p
+                  variants={fadeAbout}
+                  initial='hidden'
+                  animate='visible'
+                >
+                  Away from building really cool web apps that scale with
+                  Javascript, Typescript, React, Nextjs, Vue. I also write some
+                  Flutter/Dart. <br /> I have worked as a{' '}
+                  <span>Fullstack developer</span> building an erp software, an
+                  e-learning app as well as CMS to manage it&lsquo;s content. I
+                  hope to wrap up a Solidity course in the coming months (yay
+                  web3!) <br /> When I&lsquo;m not writing code, I&lsquo;m
+                  fan-boying Lebron James, listening to some pretty decent
+                  music, having a good laugh with sitcoms,{' '}
+                  <span>eating oreo</span> or painting rainbows in the sky.
+                </motion.p>
+              </section>
+            </motion.div>
+          </div>
+        </AnimatePresence>
+      )}
+    </>
   );
 };
 

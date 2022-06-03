@@ -50,7 +50,7 @@
         border-radius: 4px;
         cursor: pointer;
         transition: all 0.3s ease-out;
-        letter-spacing: -0.5px;
+        // letter-spacing: -0.5px;
 
         &:hover {
           background: $text-main;
@@ -84,12 +84,18 @@
       font-weight: 500;
       font-family: $font-htgrotesk !important;
       transition: all 0.3s ease-in;
-      letter-spacing: -0.5px;
+      // letter-spacing: -0.5px;
       
 
       &:hover {
         background: rgba($text-main, 0.85);
       }
     }
+  }
+}
+
+@media (max-width: 969px) {
+  .nav {
+    display: none;
   }
 }

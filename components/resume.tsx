@@ -12,7 +12,10 @@ const Resume = (): ReactElement => {
     <div className={styles.resume}>
       <div className={styles.resume__container}>
         <h3>
-          <a href='' target='__blank'>
+          <a
+            href='https://drive.google.com/file/d/1i0eSKoyhVLLDLMyDuZwV49yKDH026Gad/view?usp=sharing'
+            target='__blank'
+          >
             <span>
               <FcFile />
             </span>

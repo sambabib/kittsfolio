@@ -2,7 +2,8 @@
 @import 'variable';
 
 .modal {
-  position: absolute;
+  position: fixed;
+  top: 35%;
   right: 0;
   left: 0;
   display: flex;
@@ -11,7 +12,7 @@
   z-index: 10;
 
   .modal__container {
-    width: 500px;
+    width: 450px;
     min-height: fit-content;
     background: $background-secondary;
     border-radius: 16px;

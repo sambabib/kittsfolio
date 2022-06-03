@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import type { ReactElement } from 'react';
+import { motion } from 'framer-motion';
 import classNames from 'classnames/bind';
 
 // icons
@@ -22,10 +23,17 @@ const Fab = (): ReactElement => {
   let cx = classNames.bind(styles);
 
   return (
-    <ul
+    <motion.ul
       className={styles.fab__container}
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
+      initial={{ opacity: 0, y: 80 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        ease: 'easeInOut',
+        duration: .3,
+        delay: 2,
+      }}
     >
       <li className={styles.fab__button}>
         <FcBriefcase />
@@ -41,7 +49,7 @@ const Fab = (): ReactElement => {
           <span className={styles.tooltip}>{item.title}</span>
         </li>
       ))}
-    </ul>
+    </motion.ul>
   );
 };
 
