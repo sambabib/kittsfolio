@@ -10,17 +10,9 @@ import styles from '../styles/navbar.module.scss';
 // icons
 import { MdOutlineArrowDropDown } from 'react-icons/md';
 import Connect from '../components/connect';
-import Resume from '../components/resume';
 
-interface navProps {
-  onMouseEnter?: () => void;
-}
-
-const Navbar: React.FC<navProps> = ({
-  onMouseEnter,
-}: navProps): ReactElement => {
+const Navbar = () : ReactElement => {
   const [hover, setHover] = useState<boolean>(false);
-  const [showResume, setShowResume] = useState<boolean>(false);
 
   let cx = classNames.bind(styles);
 
@@ -30,7 +22,6 @@ const Navbar: React.FC<navProps> = ({
         className={cx('container', styles.nav)}
         onMouseLeave={() => {
           setHover(false);
-          setShowResume(false);
         }}
         animate={{ y: 0, opacity: 1 }}
         initial={{ y: -72, opacity: 0 }}
@@ -56,7 +47,12 @@ const Navbar: React.FC<navProps> = ({
               <li>Articles</li>
             </Link>
 
-            <li onMouseEnter={() => setShowResume(true)}>Resume</li>
+            <a
+              href='https://drive.google.com/file/d/1i0eSKoyhVLLDLMyDuZwV49yKDH026Gad/view?usp=sharing'
+              target='__blank'
+            >
+              <li>Resume</li>
+            </a>
           </ul>
         </div>
         <div className={styles.nav__cta}>
@@ -66,7 +62,6 @@ const Navbar: React.FC<navProps> = ({
         </div>
 
         {hover && <Connect setHover={setHover} />}
-        {showResume && <Resume />}
       </motion.nav>
     </AnimatePresence>
   );
