@@ -11,7 +11,7 @@ const Resume = (): ReactElement => {
   return (
     <div className={styles.resume}>
       <div className={styles.resume__container}>
-        <h3>
+        <span className='px-8'>
           <a
             href='https://drive.google.com/file/d/1i0eSKoyhVLLDLMyDuZwV49yKDH026Gad/view?usp=sharing'
             target='__blank'
@@ -21,7 +21,7 @@ const Resume = (): ReactElement => {
             </span>
             <p>My Resume</p>
           </a>
-        </h3>
+        </span>
       </div>
     </div>
   );

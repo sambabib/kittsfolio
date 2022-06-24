@@ -38,7 +38,7 @@ const ProjectCard = ({ item }: CardProps): ReactElement => {
           </div>
         </div>
       </div>
-      {open ? <Modal item={item} open={open} setOpen={setOpen} /> : null}
+      {open && <Modal item={item} open={open} setOpen={setOpen} />}
     </>
   );
 };

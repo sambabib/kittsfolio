@@ -1,97 +1,124 @@
 import Head from 'next/head';
 import type { ReactElement } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useContext } from 'react';
+import classNames from 'classnames/bind';
 
 // components
 import Layout from '../components/layout';
 import Fab from '../components/fab';
 // import AnimatedText from '../components/animatedtext';
-import Wip from '../components/wip';
-
-// utils
-import { viewportContext } from '../utils/viewportlayout';
 
 // styles
 import styles from '../styles/home.module.scss';
 
 const Home = () => {
-  const { width }: any = useContext(viewportContext);
+  let cx = classNames.bind(styles);
 
-  const container: {} = {
-    hidden: { opacity: 0, x: 100 },
-    visible: {
-      opacity: 1,
-      x: 0,
+  const container = {
+    initial: { y: 100 },
+    animate: {
+      y: 0,
       transition: {
-        ease: [0.6, 0.01, -0.05, 0.95],
-        duration: 1.2,
-        delay: 1.6,
+        staggerChildren: 0.3,
       },
     },
-    transition: {
-      staggerChildren: 0.35,
-      delayChildren: 0.2,
+  };
+
+  const item = {
+    initial: { y: 100, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: [0.6, 0.05, -0.01, 0.9],
+      },
+    },
+  };
+
+  const secondItem = {
+    initial: { y: 100, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 0.4,
+        ease: [0.6, 0.05, -0.01, 0.9],
+      },
     },
   };
 
   return (
     <>
-      {width <= 969 ? (
-        <Wip />
-      ) : (
-        <>
-          <Head>
-            <title>Kite | Folio</title>
-            <meta name='description' content='Kittsfolio Homepage' />
-          </Head>
-          <AnimatePresence>
-            <div className={styles.home}>
-              <section className={styles.home__section}>
-                <article>
-                  <motion.section
-                    variants={container}
-                    className={styles.about__paragraph}
-                  >
-                    {/* <div className={styles.animate__text}>
-                  <AnimatedText title={`Hi,`} />
-                  <AnimatedText title={`I'm`} />
-                  <AnimatedText title={`is`} />
-                  <AnimatedText title={`Adekite.`} />
-                </div> */}
-                    <motion.h2
-                      initial={{ opacity: 0, x: -80 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{
-                        ease: 'easeInOut',
-                        duration: 1,
-                        delay: 2,
-                      }}
-                    >
-                      My name&lsquo;s Adekite.
-                    </motion.h2>
-                    <motion.p
-                      initial={{ opacity: 0, y: 80 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{
-                        ease: 'easeInOut',
-                        duration: 1,
-                        delay: 1.7,
-                      }}
-                    >
-                      I am a <span>frontend engineer</span> living in Lagos,
-                      Nigeria. I love <span>sitcoms</span> & <span>sports</span>
-                      . I&lsquo;m also really fascinated by web3, smart doggos,
-                      art & gym heads. Yo hablo un poco de <span>espanol</span>
-                    </motion.p>
-                  </motion.section>
-                </article>
-                <Fab />
-              </section>
-            </div>
-          </AnimatePresence>
-        </>
-      )}
+      <Head>
+        <title>Kite | Folio</title>
+        <meta name='description' content='Kittsfolio Homepage' />
+      </Head>
+      <AnimatePresence>
+        <motion.div
+          className={cx(styles.home)}
+          variants={container}
+          initial='initial'
+          animate='animate'
+        >
+          <section className={cx('container', styles.home__section)}>
+            <article>
+              <motion.section className='flex flex-col absolute left-0 bottom-[7rem]'>
+                <motion.span
+                  className='text-4xl'
+                  variants={item}
+                  initial='initial'
+                  animate='animate'
+                >
+                  Hi.
+                </motion.span>
+                <motion.span
+                  className='text-4xl'
+                  variants={secondItem}
+                  initial='initial'
+                  animate='animate'
+                >
+                  My name&lsquo;s <br /> Adekite.
+                </motion.span>
+              </motion.section>
+
+              <motion.section className='relative w-full h-full'>
+                <motion.span
+                  className='text-4xl w-1/4 absolute right-0 text-right'
+                  variants={secondItem}
+                  initial='initial'
+                  animate='animate'
+                >
+                  I am a <span>frontend engineer</span> living in Lagos,
+                  Nigeria.
+                </motion.span>
+
+                <motion.span
+                  className='text-4xl w-1/4 absolute left-16'
+                  variants={secondItem}
+                  initial='initial'
+                  animate='animate'
+                >
+                  I love <span>sitcoms</span> and <span>sports</span>. I&lsquo;m
+                  oddly fascinated by funny videos on the internet, smart
+                  doggos, art and gym heads.
+                </motion.span>
+
+                <motion.span
+                  className='text-4xl absolute bottom-0 left-1/2 right-1/2 w-2/4'
+                  variants={secondItem}
+                  initial='initial'
+                  animate='animate'
+                >
+                  Yo hablo un poco de espanol.
+                </motion.span>
+              </motion.section>
+            </article>
+            <Fab />
+          </section>
+        </motion.div>
+      </AnimatePresence>
     </>
   );
 };

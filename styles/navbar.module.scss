@@ -2,13 +2,12 @@
 @import 'variable';
 
 .nav {
-  max-width: 1000px;
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 2rem auto;
-  padding: 0 .8rem;
+  padding: 0 0.8rem;
 
   .logo__container {
     width: 50px;
@@ -18,7 +17,7 @@
     align-items: center;
 
     p {
-      font-size: 1.9rem;
+      // font-size: 1.9rem;
       font-weight: 900;
       letter-spacing: -2px;
       display: flex;
@@ -28,7 +27,7 @@
   }
 
   .nav__items {
-    // width: 340px;
+    width: 400px;
     height: inherit;
     display: flex;
     flex-direction: column;
@@ -43,19 +42,20 @@
       padding: 0;
 
       li {
-        font-size: 0.8rem;
+        font-size: 1rem;
+        line-height: 1.85rem;
         font-weight: 500;
-        padding: 0.4rem 0.9rem;
+        padding: 0.2rem 1.2rem;
         background: transparent;
         border-radius: 4px;
         cursor: pointer;
         transition: all 0.3s ease-out;
-        // letter-spacing: -0.5px;
 
         &:hover {
           background: $text-main;
-          padding: 0.4rem 0.9rem;
-          font-size: 0.8rem;
+          padding: 0.2rem 1.2rem;
+          font-size: 1rem;
+          line-height: 1, 85rem;
           color: #fff;
           border-radius: 4px;
         }
@@ -77,19 +77,16 @@
       cursor: pointer;
       border: none;
       background: transparent;
-      background: $text-main;
-      color: $background-main;
       border-radius: 4px;
-      font-size: 0.8rem;
+      font-size: 1rem;
+      line-height: 1.85rem;
       font-weight: 500;
-      font-family: $font-htgrotesk !important;
+      font-family: $font-aeonik !important;
       transition: all 0.3s ease-in;
-      // letter-spacing: -0.5px;
-      
 
-      &:hover {
-        background: rgba($text-main, 0.85);
-      }
+      // &:hover {
+      //   background: rgba($text-main, 0.85);
+      // }
     }
   }
 }

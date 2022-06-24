@@ -3,12 +3,12 @@
 
 .fab__container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row-reverse;
   list-style: none;
   margin: 0;
   padding: 0;
   position: fixed;
-  right: 18%;
+  right: 30%;
   bottom: 14rem;
   max-height: 48px;
 
@@ -28,15 +28,15 @@
 
   .fab__button {
     background: $background-secondary;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .fab__action {
-    transform: translateY(50px) scale(0);
+    transform: translateY(100px) scale(0);
     opacity: 0;
     transition: transform 300ms, opacity 300ms;
 
@@ -47,7 +47,7 @@
 
     &:hover {
       .tooltip {
-        transform: translateX(-100%) scale(1);
+        transform: translateY(-100%) scale(1);
         opacity: 1;
       }
     }
@@ -55,16 +55,15 @@
 
   .tooltip {
     padding: 4px 6px;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     position: absolute;
-    left: -12px;
-    transform: translateX(-75%);
+    left: -4px;
+    transform: translateY(-75%);
     background: rgba($text-main, 0.9);
     border-radius: 4px;
     color: white;
     opacity: 0;
     transition: transform 300ms, opacity 300ms;
     user-select: none;
-    letter-spacing: -1px;
   }
 }

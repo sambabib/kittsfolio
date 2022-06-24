@@ -1,99 +1,108 @@
 import Head from 'next/head';
 import type { ReactElement } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useContext } from 'react';
-
-// utils
-import { viewportContext } from '../utils/viewportlayout';
+import classNames from 'classnames/bind';
 
 // components
 import Layout from '../components/layout';
-import Wip from '../components/wip';
 
 // styles
 import styles from '../styles/about.module.scss';
 
-const stagger: {} = {
-  animate: {
-    transition: {
-      staggerChildren: 0.09,
-    },
-  },
-};
-
-const fadeAbout: {} = {
-  hidden: {
-    y: 60,
-    opacity: 0,
-    transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-  },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      ease: [0.6, -0.05, 0.01, 0.99],
-      delay: 1.4,
-    },
-  },
-};
-
 const About = (): ReactElement => {
-  const { width }: any = useContext(viewportContext);
+  let cx = classNames.bind(styles);
+
+  const container = {
+    initial: { y: 100 },
+    animate: {
+      y: 0,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const item = {
+    initial: { y: 100, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: [0.6, 0.05, -0.01, 0.9],
+      },
+    },
+  };
+
+  const secondItem = {
+    initial: { y: 100, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 0.4,
+        ease: [0.6, 0.05, -0.01, 0.9],
+      },
+    },
+  };
 
   return (
     <>
-      {width <= 969 ? (
-        <Wip />
-      ) : (
-        <AnimatePresence exitBeforeEnter>
-          <Head>
-            <title>Kite | Folio - About</title>
-            <meta name='description' content='Kittsfolio About page' />
-          </Head>
-          <div className={styles.about}>
-            <motion.div className={styles.about__container} variants={stagger}>
-              <motion.h2
-                initial={{ opacity: 0, x: -80 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{
-                  ease: 'easeInOut',
-                  duration: 1,
-                  delay: 2,
-                }}
+      <AnimatePresence exitBeforeEnter>
+        <Head>
+          <title>Kite | Folio - About</title>
+          <meta name='description' content='Kittsfolio About page' />
+        </Head>
+        <div className={styles.about}>
+          <motion.div className='w-full h-full'>
+            <motion.h2
+              className={cx(styles.about__container)}
+              variants={container}
+              initial='initial'
+              animate='animate'
+            >
+              About.
+            </motion.h2>
+            <section className='container mx-auto relative w-full h-full'>
+              <motion.span
+                className='absolute left-0 bottom-0 w-1/3 text-4xl'
+                variants={secondItem}
+                initial='initial'
+                animate='animate'
               >
-                About.
-              </motion.h2>
-              <section className={styles.section}>
-                <motion.p
-                  variants={fadeAbout}
-                  initial='hidden'
-                  animate='visible'
-                >
-                  Okay. You already know a number of things about me.
-                  Here&lsquo;s some more stuff: <br />
-                </motion.p>
-                <motion.p
-                  variants={fadeAbout}
-                  initial='hidden'
-                  animate='visible'
-                >
-                  Away from building really cool web apps that scale with
-                  Javascript, Typescript, React, Nextjs, Vue. I also write some
-                  Flutter/Dart. <br /> I have worked as a{' '}
-                  <span>Fullstack developer</span> building an erp software, an
-                  e-learning app as well as CMS to manage it&lsquo;s content. I
-                  hope to wrap up a Solidity course in the coming months (yay
-                  web3!) <br /> When I&lsquo;m not writing code, I&lsquo;m
-                  fan-boying Lebron James, listening to some pretty decent
-                  music, having a good laugh with sitcoms,{' '}
-                  <span>eating oreo</span> or painting rainbows in the sky.
-                </motion.p>
-              </section>
-            </motion.div>
-          </div>
-        </AnimatePresence>
-      )}
+                Away from building really cool web apps that scale with
+                Javascript, Typescript, React, Nextjs, Vue. I also write some
+                Flutter/Dart.
+              </motion.span>
+
+              <motion.span
+                className='absolute bottom-0 right-0 text-right w-1/2 text-4xl'
+                variants={secondItem}
+                initial='initial'
+                animate='animate'
+              >
+                I have worked as a <span>Fullstack developer</span> building
+                enterprise software, an e-learning app, CMS to manage it&lsquo;s
+                content. I hope to wrap up a Solidity course in the coming
+                months (yay web3!)
+              </motion.span>
+
+              <motion.span
+                className='absolute right-6 top-4 w-1/2 text-4xl'
+                variants={secondItem}
+                initial='initial'
+                animate='animate'
+              >
+                When I&lsquo;m not writing code, I&lsquo;m fan-boying Lebron
+                James, listening to some pretty decent music, having a good
+                laugh with sitcoms, <span>eating oreo</span> or painting
+                rainbows in the sky.
+              </motion.span>
+            </section>
+          </motion.div>
+        </div>
+      </AnimatePresence>
     </>
   );
 };

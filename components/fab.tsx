@@ -27,12 +27,15 @@ const Fab = (): ReactElement => {
       className={styles.fab__container}
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
-      initial={{ opacity: 0, y: 80 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        ease: 'easeInOut',
-        duration: .3,
-        delay: 2,
+      initial={{ y: 100, opacity: 0 }}
+      animate={{
+        y: 0,
+        opacity: 1,
+        transition: {
+          duration: 1,
+          delay: 1.5,
+          ease: [0.6, 0.05, -0.01, 0.9],
+        },
       }}
     >
       <li className={styles.fab__button}>

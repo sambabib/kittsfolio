@@ -4,11 +4,10 @@
 .connect {
   position: absolute;
   width: 170px;
-  right: 17.5%;
+  right: 12%;
   top: 13%;
   background: $background-main;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  // border: $background-tertiary;
   transition: all 0.6s ease-in-out;
   z-index: 20;
 
@@ -31,7 +30,6 @@
   .connect__container {
     position: relative;
     width: 100%;
-    // border: 1px solid red;
 
     ul {
       list-style: none;
@@ -39,10 +37,8 @@
       width: 100%;
 
       li {
-        font-size: 0.85rem;
+        font-size: 1rem;
         padding: 0.8rem 2rem;
-        font-size: 0.8rem;
-        letter-spacing: -0.5px;
         display: flex;
         align-items: center;
         font-weight: 500;

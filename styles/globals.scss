@@ -1,5 +1,6 @@
-// importing fonts
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 // importing partials
 @import 'variable';
@@ -9,8 +10,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: $font-htgrotesk;
+  font-family: $font-aeonik;
   background: $background-main;
+  letter-spacing: -0.02em;
   color: $text-main;
 }
 

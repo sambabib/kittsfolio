@@ -18,7 +18,6 @@ const Connect = ({ setHover }: connectProps): ReactElement => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       >
-      {/* <span className={styles.tooltip__arrow}></span> */}
       <div className={styles.connect__container}>
         <ul>
           <li>
