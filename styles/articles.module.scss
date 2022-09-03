@@ -1,0 +1,12 @@
+// partials
+@import 'variable';
+
+@media (min-width: 768px) {
+  .articles__card {
+    width: 50%;
+    
+    &:first-child {
+      border-right: 1px solid $background-tertiary;
+    }
+  }
+}

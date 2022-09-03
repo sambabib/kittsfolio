@@ -15,13 +15,14 @@ const BlogPostsCard = ({ post }: BlogProps): ReactElement => {
     <>
       <a href={post.link} target='__blank'>
         <div className={styles.posts__card__container}>
+          <div className={styles.card__id}>
+            <span className='text-2xl font-medium'>{post.id}</span>
+          </div>
+          
           <div className={styles.card__heading}>
-            <h3>{post.title}</h3>
+            <h3 className='text-lg'>{post.title}</h3>
           </div>
 
-          <div className="">
-            <span>{post.id}</span>
-          </div>
 
           <div className={styles.card__date}>
             <FiCalendar /> <span>{post.postedOn}</span>

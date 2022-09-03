@@ -43,9 +43,17 @@ export const projects: Projects[] = [
   {
     id: 5,
     title: `kittsfolio`,
-    tags: [`Typescript`, `Nextjs`, `Framer-Motion`, ],
+    tags: [`Typescript`, `Nextjs`, `Framer-Motion`],
     live: ``,
     code: `https://github.com/sambabib/kittsfolio`,
     description: `My portfoio website built in Typescript && Nextjs.`,
+  },
+  {
+    id: 6,
+    title: `resagratia`,
+    tags: [`React`, `Expressjs`, `Nodejs`, `Sanity.io`, `Mongodb`],
+    live: `https://resagratia.com`,
+    code: ``,
+    description: `An e-learning webapp for data professionals and enthusiasts`,
   },
 ];

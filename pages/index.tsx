@@ -7,6 +7,7 @@ import Layout from '../components/layout';
 import Landing from '../components/landing';
 import Work from '../components/work';
 import Articles from '../components/articles';
+import Connect from '../components/connect';
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         <Landing />
         <Work />
         <Articles />
+        <Connect />
       </AnimatePresence>
     </>
   );

@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../styles/modal.module.scss';
 
 // icons
-import { FiCode, FiLink, FiX, FiArrowLeft } from 'react-icons/fi';
+import { FiCode, FiLink, FiGitBranch, FiArrowLeft } from 'react-icons/fi';
 
 interface ModalProps {
   project: any;
@@ -73,27 +73,47 @@ const Modal = ({ project, open, setOpen }: ModalProps): ReactElement => {
 
             <div className={cx('flex flex-col gap-2 my-12', styles.code)}>
               <h4 className='text-sm font-semibold'>Github</h4>
-              <a
-                className='text-xs font-semibold'
-                href={project.code}
-                target='__blank'
-              >
-                <FiCode className={styles.icon} /> {project.code}
-              </a>
+              {project.code === '' ? (
+                <span className='text-xs'>
+                  <FiGitBranch className={styles.icon} /> Private
+                </span>
+              ) : (
+                <a
+                  className='text-xs font-semibold'
+                  href={project.code}
+                  target='__blank'
+                >
+                  <FiCode className={styles.icon} /> {project.code}
+                </a>
+              )}
             </div>
           </div>
 
-          <a href={project.live} target='__blank'>
+          <a
+            className={`${
+              project.live === '' && 'cursor-not-allowed pointer-events-none'
+            }`}
+            href={project.live}
+            target='__blank'
+          >
             <div
               className={cx(
                 'flex flex-row items-center justify-center gap-2',
                 styles.live
               )}
             >
-              <p className='text-white text-sm'>Live Demo</p>
-              <span>
-                <FiLink />
-              </span>
+              {project.live === '' ? (
+                <p className='text-white text-sm'>
+                  This project currently lives on my local machine
+                </p>
+              ) : (
+                <>
+                  <p className='text-white text-sm'>Live Demo</p>
+                  <span>
+                    <FiLink />
+                  </span>
+                </>
+              )}
             </div>
           </a>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import type { ReactElement } from 'react';
+import classNames from 'classnames/bind';
 
 // components
 import BlogPostsCard from './blogpostsCard';
@@ -7,7 +8,12 @@ import BlogPostsCard from './blogpostsCard';
 // utils
 import { posts } from '../utils/posts';
 
+// styles
+import styles from '../styles/articles.module.scss';
+
 const Articles = (): ReactElement => {
+  let cx = classNames.bind(styles);
+
   return (
     <div className='container mx-auto my-20'>
       <section className=' px-8'>
@@ -18,9 +24,9 @@ const Articles = (): ReactElement => {
         </div>
 
         <section>
-          <div className=''>
+          <div className={cx('flex flex-row flex-wrap justify-between items-center', styles.articles)}>
             {posts.map((post, index) => (
-              <div className=''>
+              <div key={index} className={styles.articles__card}>
                 <BlogPostsCard post={post} />
               </div>
             ))}
