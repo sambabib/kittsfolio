@@ -8,12 +8,11 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: $font-aeonik;
+  font-family: $font-mabry;
   background: $background-main;
-  letter-spacing: -0.02em;
   color: $text-main;
+  line-height: 1;
+  font-weight: 300 !important;
 }
 
 a {
@@ -22,10 +21,11 @@ a {
 }
 
 p {
-  line-height: 1.7;
   color: $text-main;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }

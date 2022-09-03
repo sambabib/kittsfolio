@@ -9,12 +9,12 @@ import styles from '../styles/modal.module.scss';
 import { FiCode, FiLink, FiX, FiArrowLeft } from 'react-icons/fi';
 
 interface ModalProps {
-  item: any;
+  project: any;
   open: boolean;
   setOpen: any;
 }
 
-const Modal = ({ item, open, setOpen }: ModalProps): ReactElement => {
+const Modal = ({ project, open, setOpen }: ModalProps): ReactElement => {
   let cx = classNames.bind(styles);
 
   return (
@@ -41,23 +41,23 @@ const Modal = ({ item, open, setOpen }: ModalProps): ReactElement => {
 
           <div
             className={cx(
-              'flex flex-col justify-between items-start p-8 relative top-16',
+              'flex flex-col justify-between projects-start p-8 relative top-16',
               styles.inner__modal
             )}
           >
             <div className={styles.heading}>
-              <h3>{item.title}</h3>
+              <h3>{project.title}</h3>
             </div>
 
             <div className={styles.description}>
               <h4 className='text-lg font-semibold pb-5'>Description:</h4>
-              <p>{item.description}</p>
+              <p>{project.description}</p>
             </div>
 
             <div className={styles.tag}>
               <h4 className='text-lg font-semibold pb-5'>Stack:</h4>
-              <div className={styles.tag__item}>
-                {item.tags.map((tag: any, index: any) => (
+              <div className={styles.tag__project}>
+                {project.tags.map((tag: any, index: any) => (
                   <p className='text-sm' key={index}>
                     {tag}
                   </p>
@@ -67,16 +67,16 @@ const Modal = ({ item, open, setOpen }: ModalProps): ReactElement => {
 
             <div className={styles.code}>
               <h4 className='text-lg font-semibold pb-5'>Github:</h4>
-              <a href={item.code} target='__blank'>
-                <FiCode className={styles.icon} /> {item.code}
+              <a href={project.code} target='__blank'>
+                <FiCode className={styles.icon} /> {project.code}
               </a>
             </div>
           </div>
 
-          <a href={item.live} target='__blank'>
+          <a href={project.live} target='__blank'>
             <div
               className={cx(
-                'flex items-center justify-center gap-4',
+                'flex projects-center justify-center gap-4',
                 styles.live
               )}
             >

@@ -4,11 +4,13 @@
 .projects__card__container {
   display: flex;
   flex-direction: column;
-  gap: 3.4rem;
+  justify-content: flex-end;
+  gap: 1.8em;
   padding: 1.8rem 2.4rem;
   background: $background-tertiary;
   border-radius: 4px;
   cursor: pointer;
+  height: 100%;
 
   &:hover {
     transition: all .5s ease-in-out;
@@ -16,13 +18,16 @@
   }
 
   .card__heading {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
     h3 {
       font-size: 1.8rem;
-      letter-spacing: -2px;
     }
 
     p {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       font-weight: 500;
     }
   }

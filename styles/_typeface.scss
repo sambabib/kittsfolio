@@ -1,46 +1,62 @@
 @font-face {
-  font-family: 'Aeonik, sans-serif';
-  src: url('../public/fonts/AeonikTRIAL-Light.otf') format('opentype');
+  font-family: 'Mabry Pro, sans-serif';
+  src: url('../public/fonts/Mabry-Pro-Light.otf') format('opentype');
   font-weight: light;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Aeonik, sans-serif';
-  src: url('../public/fonts/AeonikTRIAL-LightItalic.otf') format('opentype');
+  font-family: 'Mabry Pro, sans-serif';
+  src: url('../public/fonts/Mabry-Pro-Light-Italic.otf') format('opentype');
   font-weight: light;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Aeonik, sans-serif';
-  src: url('../public/fonts/AeonikTRIAL-Regular.otf') format('opentype');
+  font-family: 'Mabry Pro, sans-serif';
+  src: url('../public/fonts/Mabry-Pro.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Aeonik, sans-serif';
-  src: url('../public/fonts/AeonikTRIAL-RegularItalic.otf') format('opentype');
+  font-family: 'Mabry Pro, sans-serif';
+  src: url('../public/fonts/Mabry-Pro-Italic.otf') format('opentype');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Aeonik, sans-serif';
-  src: url('../public/fonts/AeonikTRIAL-Bold.otf') format('opentype');
+  font-family: 'Mabry Pro, sans-serif';
+  src: url('../public/fonts/Mabry-Pro-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mabry Pro, sans-serif';
+  src: url('../public/fonts/Mabry-Pro-Medium-Italic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mabry Pro, sans-serif';
+  src: url('../public/fonts/Mabry-Pro-Bold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Aeonik, sans-serif';
-  src: url('../public/fonts/AeonikTRIAL-BoldItalic.otf') format('opentype');
+  font-family: 'Mabry Pro, sans-serif';
+  src: url('../public/fonts//Mabry-Pro-Bold-Italic.otf') format('opentype');
   font-weight: bold;
   font-style: italic;
   font-display: swap;

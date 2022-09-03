@@ -1,27 +1,40 @@
-// partials
-@import 'variable';
+.project__grid {
+  display: grid;
+  //   grid-template-columns: repeat(2, 480px);
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
+  gap: 1rem;
+}
 
-.work {
-  position: relative;
-
-  .work__container {
-    max-width: 900px;
-    margin: 0 auto;
-    z-index: 10;
-
-    h2 {
-      font-size: 2.3rem;
-      font-weight: 900;
-      letter-spacing: -4px !important;
-      margin-bottom: 2rem;
+@media (min-width: 768px) {
+  .grid__card {
+    &:first-child {
+      height: 260px !important;
     }
 
-    .work__projects {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      gap: 1rem;
+    &:nth-child(2) {
+      margin-top: 40px;
+      height: 300px !important;
     }
+
+    &:nth-child(3) {
+      margin-top: -5rem !important;
+      height: 300px !important;
+    }
+
+    &:nth-child(4) {
+      height: 300px !important;
+    }
+
+    &:nth-child(5) {
+      height: 260px !important;
+      margin-top: -5rem !important;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .grid__card > * {
+    height: 340px !important;
   }
 }

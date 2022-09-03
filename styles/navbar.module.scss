@@ -1,98 +1,36 @@
 // importing partials
 @import 'variable';
 
-.nav {
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 2rem auto;
-  padding: 0 0.8rem;
+.nav__content {
+  position: relative;
+  width: 250px;
 
-  .logo__container {
-    width: 50px;
-    height: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    p {
-      // font-size: 1.9rem;
-      font-weight: 900;
-      letter-spacing: -2px;
-      display: flex;
-      justify-content: center;
-      cursor: pointer !important;
-    }
+  ul {
+    width: 100%;
   }
 
-  .nav__items {
-    width: 400px;
-    height: inherit;
+  li {
+    position: relative;
+    cursor: pointer;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    padding: 0.4rem 0;
 
-    ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      padding: 0;
+    &:hover {
+      transition: all 0.3s ease-in;
+      color: $text-secondary;
 
-      li {
-        font-size: 1rem;
-        line-height: 1.85rem;
-        font-weight: 500;
-        padding: 0.2rem 1.2rem;
-        background: transparent;
-        border-radius: 4px;
-        cursor: pointer;
+      .span__line {
         transition: all 0.3s ease-out;
-
-        &:hover {
-          background: $text-main;
-          padding: 0.2rem 1.2rem;
-          font-size: 1rem;
-          line-height: 1, 85rem;
-          color: #fff;
-          border-radius: 4px;
-        }
+        border-bottom: 1px solid $text-secondary;
+        width: 3.4rem;
       }
     }
   }
 
-  .nav__cta {
-    height: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    button {
-      padding: 0.8rem 1.4rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      cursor: pointer;
-      border: none;
-      background: transparent;
-      border-radius: 4px;
-      font-size: 1rem;
-      line-height: 1.85rem;
-      font-weight: 500;
-      font-family: $font-aeonik !important;
-      transition: all 0.3s ease-in;
-
-      // &:hover {
-      //   background: rgba($text-main, 0.85);
-      // }
-    }
-  }
-}
-
-@media (max-width: 969px) {
-  .nav {
-    display: none;
+  .span__line {
+    border-bottom: 1px solid $text-main;
+    width: 3rem;
+    margin: 0 0.8rem;
   }
 }

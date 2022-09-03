@@ -1,68 +1,47 @@
 import React, { useState } from 'react';
 import type { ReactElement } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import classNames from 'classnames/bind';
 
 // styles
 import styles from '../styles/navbar.module.scss';
 
-// icons
-import { MdOutlineArrowDropDown } from 'react-icons/md';
-import Connect from '../components/connect';
-
-const Navbar = () : ReactElement => {
-  const [hover, setHover] = useState<boolean>(false);
-
+const Navbar = (): ReactElement => {
   let cx = classNames.bind(styles);
 
   return (
     <AnimatePresence>
-      <motion.nav
-        className={cx('container', styles.nav)}
-        onMouseLeave={() => {
-          setHover(false);
-        }}
-        animate={{ y: 0, opacity: 1 }}
-        initial={{ y: -72, opacity: 0 }}
-        transition={{
-          duration: 1,
-          ease: [0.6, 0.05, -0.01, 0.9],
-        }}
-      >
-        <div className={cx('text-4xl', styles.logo__container)}>
-          <Link href='/' passHref>
-            <p>aa.</p>
-          </Link>
-        </div>
-        <div className={styles.nav__items}>
-          <ul>
-            <Link href='/about' passHref>
-              <li>About</li>
-            </Link>
-            <Link href='/work' passHref>
-              <li>Work</li>
-            </Link>
-            <Link href='/articles' passHref>
-              <li>Articles</li>
-            </Link>
+      <nav className='h-56 px-8 container mx-auto mt-16 mb-12 flex flex-col gap-12 lg:flex lg:flex-row lg:justify-between'>
+        <Link href='/' passHref>
+          <div className=''>
+            <span className='text-sm uppercase !leading-none'>
+              adekite <br /> akala
+            </span>
+          </div>
+        </Link>
 
-            <a
-              href='https://drive.google.com/file/d/1i0eSKoyhVLLDLMyDuZwV49yKDH026Gad/view?usp=sharing'
-              target='__blank'
-            >
-              <li>Resume</li>
-            </a>
+        <div className={cx('', styles.nav__content)}>
+          <span className='uppercase text-sm lg:text-xs'>Menu</span>
+          <ul className='mt-1 flex flex-col gap-1'>
+            <li className='uppercase text-xs'>
+              {' '}
+              <span>01</span>
+              <span className={styles.span__line}></span>Work
+            </li>
+            <li className='uppercase text-xs'>
+              {' '}
+              <span>02</span>
+              <span className={styles.span__line}></span>Blog
+            </li>
+            <li className='uppercase text-xs'>
+              {' '}
+              <span>03</span>
+              <span className={styles.span__line}></span>Connect with me
+            </li>
           </ul>
         </div>
-        <div className={styles.nav__cta}>
-          <button type='button' onMouseEnter={() => setHover(true)}>
-            Connect with me <MdOutlineArrowDropDown size={35} />
-          </button>
-        </div>
-
-        {hover && <Connect setHover={setHover} />}
-      </motion.nav>
+      </nav>
     </AnimatePresence>
   );
 };

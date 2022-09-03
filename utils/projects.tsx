@@ -7,7 +7,7 @@ interface Projects {
   description: String;
 }
 
-export const projectData: Projects[] = [
+export const projects: Projects[] = [
   {
     id: 1,
     title: `invoiceMe`,
