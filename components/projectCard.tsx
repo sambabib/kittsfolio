@@ -39,7 +39,10 @@ const ProjectCard = ({ project }: CardProps): ReactElement => {
           </div>
         </div>
       </div>
-      {open && <Modal project={project} open={open} setOpen={setOpen} />}
+      
+      <div className='absolute top-0 right-0 bottom-0 h-full'>
+        {open && <Modal project={project} open={open} setOpen={setOpen} />}
+      </div>
     </>
   );
 };

@@ -7,20 +7,24 @@ import styles from '../styles/blogpostscard.module.scss';
 import { FiCalendar } from 'react-icons/fi';
 
 interface BlogProps {
-  item: any;
+  post: any;
 }
 
-const BlogPostsCard = ({ item }: BlogProps): ReactElement => {
+const BlogPostsCard = ({ post }: BlogProps): ReactElement => {
   return (
     <>
-      <a href={item.link} target='__blank'>
+      <a href={post.link} target='__blank'>
         <div className={styles.posts__card__container}>
           <div className={styles.card__heading}>
-            <h3>{item.title}</h3>
+            <h3>{post.title}</h3>
+          </div>
+
+          <div className="">
+            <span>{post.id}</span>
           </div>
 
           <div className={styles.card__date}>
-            <FiCalendar /> <p>{item.postedOn}</p>
+            <FiCalendar /> <span>{post.postedOn}</span>
           </div>
         </div>
       </a>

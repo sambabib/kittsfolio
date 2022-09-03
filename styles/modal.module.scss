@@ -3,51 +3,35 @@
 
 .modal {
   background: $background-secondary;
-  z-index: 50;
+  height: 100% !important;
+  z-index: 10;
 
-  .modal__container {
-    background: $background-secondary;
+  .close__button {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 3%;
+    top: 3%;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: transparent;
+    border: 4px solid $background-tertiary;
+    cursor: pointer;
 
-    .close__button {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      left: 3%;
-      top: 3%;
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      background: transparent;
-      border: 4px solid $background-tertiary;
-      cursor: pointer;
-    }
-  }
-
-  .inner__modal {
-    height: calc(100% - 200px);
-  }
-
-  .heading {
-    h3 {
-      font-size: 1.8rem;
-      letter-spacing: -2px;
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      border: 4px solid $primary-blue;
     }
   }
 
   .tag {
-    .tag__item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-
-      p {
-        background: $background-primary;
-        padding: 0.4rem 0.9rem;
-        border-radius: 4px;
-      }
+    span {
+      background: $background-primary;
+      padding: 0.4rem 0.9rem;
+      border-radius: 4px;
     }
   }
 
@@ -68,12 +52,19 @@
     color: $background-main;
     text-align: center;
     padding: 0.7rem 1.3rem;
+    height: 64px !important;
     transition: all 0.3s ease;
-    z-index: 12;
+    z-index: 10;
 
     &:hover {
       transition: all 0.3s ease-in-out;
       background: $primary-blue;
     }
+  }
+}
+
+@media (max-width: 620px) {
+  .modal {
+    width: 100% !important;
   }
 }

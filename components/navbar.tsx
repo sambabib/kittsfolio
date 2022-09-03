@@ -32,7 +32,7 @@ const Navbar = (): ReactElement => {
             <li className='uppercase text-xs'>
               {' '}
               <span>02</span>
-              <span className={styles.span__line}></span>Blog
+              <span className={styles.span__line}></span>Articles
             </li>
             <li className='uppercase text-xs'>
               {' '}

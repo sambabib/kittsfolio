@@ -6,6 +6,7 @@ import { AnimatePresence } from 'framer-motion';
 import Layout from '../components/layout';
 import Landing from '../components/landing';
 import Work from '../components/work';
+import Articles from '../components/articles';
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <AnimatePresence>
         <Landing />
         <Work />
+        <Articles />
       </AnimatePresence>
     </>
   );

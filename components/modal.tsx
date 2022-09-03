@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import type { ReactElement } from 'react';
 import classNames from 'classnames/bind';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -17,6 +18,12 @@ interface ModalProps {
 const Modal = ({ project, open, setOpen }: ModalProps): ReactElement => {
   let cx = classNames.bind(styles);
 
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+
+    return (): any => (document.body.style.overflow = 'unset');
+  }, []);
+
   return (
     <AnimatePresence>
       <motion.div
@@ -32,42 +39,45 @@ const Modal = ({ project, open, setOpen }: ModalProps): ReactElement => {
             styles.modal__container
           )}
         >
-          <button
-            className={styles.close__button}
-            onClick={() => setOpen(!open)}
-          >
-            <FiArrowLeft />
-          </button>
+          <div className='flex flex-row justify-between items-center mt-8'>
+            <button
+              className={styles.close__button}
+              onClick={() => setOpen(!open)}
+            >
+              <FiArrowLeft />
+            </button>
 
-          <div
-            className={cx(
-              'flex flex-col justify-between projects-start p-8 relative top-16',
-              styles.inner__modal
-            )}
-          >
-            <div className={styles.heading}>
+            <span className='px-8 text-sm font-semibold'>Go Back</span>
+          </div>
+
+          <div className={cx('p-8 relative', styles.inner__modal)}>
+            <div className={cx('font-semibold text-lg', styles.heading)}>
               <h3>{project.title}</h3>
             </div>
 
-            <div className={styles.description}>
-              <h4 className='text-lg font-semibold pb-5'>Description:</h4>
-              <p>{project.description}</p>
+            <div className='flex flex-col gap-2 my-12'>
+              <h4 className='text-sm font-semibold'>Description</h4>
+              <p className='text-sm font-light'>{project.description}</p>
             </div>
 
-            <div className={styles.tag}>
-              <h4 className='text-lg font-semibold pb-5'>Stack:</h4>
-              <div className={styles.tag__project}>
+            <div className={cx('flex flex-col gap-2 my-12', styles.tag)}>
+              <h4 className='text-sm font-semibold'>Stack</h4>
+              <div className='flex flex-row gap-2'>
                 {project.tags.map((tag: any, index: any) => (
-                  <p className='text-sm' key={index}>
+                  <span className='text-xs font-medium' key={index}>
                     {tag}
-                  </p>
+                  </span>
                 ))}
               </div>
             </div>
 
-            <div className={styles.code}>
-              <h4 className='text-lg font-semibold pb-5'>Github:</h4>
-              <a href={project.code} target='__blank'>
+            <div className={cx('flex flex-col gap-2 my-12', styles.code)}>
+              <h4 className='text-sm font-semibold'>Github</h4>
+              <a
+                className='text-xs font-semibold'
+                href={project.code}
+                target='__blank'
+              >
                 <FiCode className={styles.icon} /> {project.code}
               </a>
             </div>
@@ -76,11 +86,14 @@ const Modal = ({ project, open, setOpen }: ModalProps): ReactElement => {
           <a href={project.live} target='__blank'>
             <div
               className={cx(
-                'flex projects-center justify-center gap-4',
+                'flex flex-row items-center justify-center gap-2',
                 styles.live
               )}
             >
-              <FiLink /> <p className='text-white'>Live Demo</p>
+              <p className='text-white text-sm'>Live Demo</p>
+              <span>
+                <FiLink />
+              </span>
             </div>
           </a>
         </div>
