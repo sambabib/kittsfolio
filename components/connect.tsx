@@ -1,8 +1,14 @@
 import React from 'react';
 import type { ReactElement } from 'react';
 import { CgCopyright, CgArrowTopRight } from 'react-icons/cg';
+import classNames from 'classnames/bind';
+
+// styles
+import styles from '../styles/connect.module.scss';
 
 const Connect = (): ReactElement => {
+  let cx = classNames.bind(styles);
+
   return (
     <div className='container mx-auto my-20'>
       <section className=' px-8'>
@@ -33,34 +39,43 @@ const Connect = (): ReactElement => {
               </span>
             </div>
 
-            <div className='my-8 flex flex-row gap-4'>
-              <span className='text-sm lg:text-xs font-semibold uppercase w-full underline transition-all pb-2'>
-                <a
-                  className='flex flex-row gap-1'
-                  href='https://kitts.hashnode.dev/'
-                  target='__blank'
+            <div className={cx('my-8 flex flex-row gap-4', styles.connect__footer)}>
+              <a
+                href='https://github.com/sambabib'
+                target='__blank'
+                className='text-sm lg:text-xs font-semibold uppercase w-full underline transition-all pb-2'
+              >
+                <span
+                  data-hover='Github'
+                  className='relative flex flex-row gap-1'
                 >
                   <CgArrowTopRight /> Github
-                </a>
-              </span>
-              <span className='text-sm lg:text-xs font-semibold uppercase w-full underline transition-all pb-2'>
-                <a
-                  className='flex flex-row gap-1'
-                  href='https://kitts.hashnode.dev/'
-                  target='__blank'
+                </span>
+              </a>
+              <a
+                href='https://www.linkedin.com/in/adekite/'
+                target='__blank'
+                className='text-sm lg:text-xs font-semibold uppercase w-full underline transition-all pb-2'
+              >
+                <span
+                  data-hover='LinkedIn'
+                  className='relative flex flex-row gap-1'
                 >
                   <CgArrowTopRight /> LinkedIn
-                </a>
-              </span>
-              <span className='text-sm lg:text-xs font-semibold uppercase w-full underline transition-all pb-2'>
-                <a
-                  className='flex flex-row gap-1'
-                  href='https://kitts.hashnode.dev/'
-                  target='__blank'
+                </span>
+              </a>
+              <a
+                href='https://twitter.com/__kitts'
+                target='__blank'
+                className='text-sm lg:text-xs font-semibold uppercase w-full underline transition-all pb-2'
+              >
+                <span
+                  data-hover='Twitter'
+                  className='relative flex flex-row gap-1'
                 >
                   <CgArrowTopRight /> Twitter
-                </a>
-              </span>
+                </span>
+              </a>
             </div>
           </div>
         </section>
