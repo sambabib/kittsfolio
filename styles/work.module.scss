@@ -1,11 +1,11 @@
 .project__grid {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
   gap: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 696px) {
   .grid__card {
     &:first-child {
       height: 260px !important;
@@ -35,5 +35,11 @@
 @media (max-width: 620px) {
   .grid__card > * {
     height: 340px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .project__grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
   }
 }

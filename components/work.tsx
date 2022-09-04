@@ -25,7 +25,7 @@ const Work = (): ReactElement => {
         </div>
 
         <section className='container mx-auto'>
-          <div className={cx('max-w-[900px] mx-auto', styles.project__grid)}>
+          <div className={cx('max-w-full mx-auto', styles.project__grid)}>
             {projects.map((project, index) => (
               <div key={index} className={styles.grid__card}>
                 <ProjectCard project={project} />
