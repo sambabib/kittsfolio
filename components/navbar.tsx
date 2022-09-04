@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import type { ReactElement } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Link from 'next/link';

@@ -1,0 +1,34 @@
+// .connect__footer {
+//   .connect__container {
+//     // display: inline-flex;
+//     position: relative;
+//     transition: transform 0.3s cubic-bezier(0.4, 1, 0.8, 1),
+//     -webkit-transform 0.3s cubic-bezier(0.4, 1, 0.8, 1);
+//     // border: 1px solid red;
+
+//     .connect__inner__container {
+//       transform: translateY(0);
+//       transition: transform 0.3s cubic-bezier(0.4, 1, 0.8, 1),
+//         -webkit-transform 0.3s cubic-bezier(0.4, 1, 0.8, 1);
+//     }
+
+//     &:hover {
+//       .connect__inner__container {
+//         transform: translateY(-100%);
+//       }
+//     }
+
+//     a {
+//       span {
+//         &::after {
+//           content: attr(data-hover);
+//           position: absolute;
+//           top: 100%;
+//           right: 0;
+
+//           pointer-events: none;
+//         }
+//       }
+//     }
+//   }
+// }

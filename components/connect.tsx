@@ -11,7 +11,7 @@ const Connect = (): ReactElement => {
   let cx = classNames.bind(styles);
 
   return (
-    <div className='container mx-auto my-20'>
+    <div id='#connect' className='container mx-auto my-20'>
       <section className=''>
         <div className=''>
           <h3 className='leading-relaxed text-xs uppercase font-light mb-8'>

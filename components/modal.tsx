@@ -62,7 +62,7 @@ const Modal = ({ project, open, setOpen }: ModalProps): ReactElement => {
 
             <div className={cx('flex flex-col gap-2 my-12', styles.tag)}>
               <h4 className='text-sm font-semibold'>Stack</h4>
-              <div className='flex flex-row gap-2'>
+              <div className='flex flex-row  flex-wrap gap-2'>
                 {project.tags.map((tag: any, index: any) => (
                   <span className='text-xs font-medium' key={index}>
                     {tag}
