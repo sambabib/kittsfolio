@@ -13,7 +13,7 @@ const Landing = (): ReactElement => {
 
   return (
     <section className='container mx-auto'>
-      <section className='px-8 my-12'>
+      <section className='my-12'>
         <div className=''>
           <h3 className='leading-relaxed text-xs uppercase font-light mb-1'>
             About.
@@ -25,7 +25,7 @@ const Landing = (): ReactElement => {
         </div>
       </section>
 
-      <section className='px-8 my-24'>
+      <section className='my-24'>
         <div className='flex flex-col w-full'>
           <span className='text-sm lg:text-xs uppercase w-full text-right'>
             Frontend Developer

@@ -17,14 +17,14 @@ const Work = (): ReactElement => {
 
   return (
     <div className='container mx-auto my-20'>
-      <section className=' px-8'>
+      <section className=''>
         <div className=''>
           <h3 className='leading-relaxed text-xs uppercase font-light mb-8'>
             Work.
           </h3>
         </div>
 
-        <section className=''>
+        <section className='container mx-auto'>
           <div className={cx('max-w-[900px] mx-auto', styles.project__grid)}>
             {projects.map((project, index) => (
               <div key={index} className={styles.grid__card}>

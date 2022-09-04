@@ -12,7 +12,7 @@ const Navbar = (): ReactElement => {
 
   return (
     <AnimatePresence>
-      <nav className='h-56 px-8 container mx-auto mt-16 mb-12 flex flex-col gap-12 lg:flex lg:flex-row lg:justify-between'>
+      <nav className='h-56 container mx-auto mt-16 mb-12 flex flex-col gap-12 lg:flex lg:flex-row lg:justify-between'>
         <Link href='/' passHref>
           <div className=''>
             <span className='text-sm uppercase !leading-none'>

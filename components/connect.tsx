@@ -2,6 +2,7 @@ import React from 'react';
 import type { ReactElement } from 'react';
 import { CgCopyright, CgArrowTopRight } from 'react-icons/cg';
 import classNames from 'classnames/bind';
+import { socials } from '../utils/socials';
 
 // styles
 import styles from '../styles/connect.module.scss';
@@ -11,7 +12,7 @@ const Connect = (): ReactElement => {
 
   return (
     <div className='container mx-auto my-20'>
-      <section className=' px-8'>
+      <section className=''>
         <div className=''>
           <h3 className='leading-relaxed text-xs uppercase font-light mb-8'>
             Connect with me.
@@ -39,43 +40,28 @@ const Connect = (): ReactElement => {
               </span>
             </div>
 
-            <div className={cx('my-8 flex flex-row gap-4', styles.connect__footer)}>
-              <a
-                href='https://github.com/sambabib'
-                target='__blank'
-                className='text-sm lg:text-xs font-semibold uppercase w-full underline transition-all pb-2'
-              >
-                <span
-                  data-hover='Github'
-                  className='relative flex flex-row gap-1'
+            <div
+              className={cx('my-8 flex flex-row gap-4', styles.connect__footer)}
+            >
+              {socials.map((social, index) => (
+                <a
+                  href={social.link}
+                  key={index}
+                  target='__blank'
+                  className='text-sm lg:text-xs font-semibold uppercase w-full underline transition-all pb-2'
                 >
-                  <CgArrowTopRight /> Github
-                </span>
-              </a>
-              <a
-                href='https://www.linkedin.com/in/adekite/'
-                target='__blank'
-                className='text-sm lg:text-xs font-semibold uppercase w-full underline transition-all pb-2'
-              >
-                <span
-                  data-hover='LinkedIn'
-                  className='relative flex flex-row gap-1'
-                >
-                  <CgArrowTopRight /> LinkedIn
-                </span>
-              </a>
-              <a
-                href='https://twitter.com/__kitts'
-                target='__blank'
-                className='text-sm lg:text-xs font-semibold uppercase w-full underline transition-all pb-2'
-              >
-                <span
-                  data-hover='Twitter'
-                  className='relative flex flex-row gap-1'
-                >
-                  <CgArrowTopRight /> Twitter
-                </span>
-              </a>
+                  <span className={styles.connect__container}>
+                    <span className={styles.connect__inner__container}>
+                      <span
+                        data-hover={social.title}
+                        className='relative flex flex-row gap-1'
+                      >
+                        <CgArrowTopRight /> {social.title}
+                      </span>
+                    </span>
+                  </span>
+                </a>
+              ))}
             </div>
           </div>
         </section>

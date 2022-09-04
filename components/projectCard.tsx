@@ -25,7 +25,7 @@ const ProjectCard = ({ project }: CardProps): ReactElement => {
       >
         <div className={styles.card__heading}>
           <h3>{project.title}</h3>
-          <p>{project.tags.join(', ')}</p>
+          <span>{project.tags.join(', ')}</span>
         </div>
 
         <div className={styles.card__details}>

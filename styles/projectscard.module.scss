@@ -20,13 +20,13 @@
   .card__heading {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: .8rem;
 
     h3 {
       font-size: 1.8rem;
     }
 
-    p {
+    span {
       font-size: 0.8rem;
       font-weight: 300;
     }
