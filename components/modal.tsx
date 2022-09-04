@@ -47,7 +47,7 @@ const Modal = ({ project, open, setOpen }: ModalProps): ReactElement => {
               <FiArrowLeft />
             </button>
 
-            <span className='text-sm font-semibold'>Go Back</span>
+            <span className='text-sm font-semibold px-8'>Go Back</span>
           </div>
 
           <div className={cx('p-8 relative', styles.inner__modal)}>
