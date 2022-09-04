@@ -7,7 +7,6 @@
   right: 0;
   bottom: 0;
   left: 0;
-  // border: 1px solid red;
   z-index: 99;
   background: $text-main;
   overflow-y: hidden !important;
@@ -15,25 +14,20 @@
   pointer-events: none;
 
   .preloader__progress {
-    // border: 1px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     height: calc(60% - 20px);
-    // border: 1px solid red;
-    // background-color: #eee;
 
     .progress__bar {
       position: relative;
       height: 25px;
       width: 300px;
       overflow: hidden;
-      // border: 1px solid blue;
       background: $background-secondary;
       border: 1px solid $text-main;
-      // color: #fff;
 
       .progress__number {
         position: absolute;
@@ -45,6 +39,12 @@
       }
 
     }
-
   }
 }
+
+@media (max-width: 620px) {
+    .progress__bar {
+        width: calc(80% - 20px) !important;
+    }
+}
+
