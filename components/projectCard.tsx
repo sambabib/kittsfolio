@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { ReactElement } from 'react';
 
 // components
@@ -16,6 +16,12 @@ interface CardProps {
 
 const ProjectCard = ({ project }: CardProps): ReactElement => {
   const [open, setOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (open) {
+    
+    }
+  }, [open])
 
   return (
     <>

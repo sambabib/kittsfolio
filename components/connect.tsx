@@ -48,7 +48,7 @@ const Connect = (): ReactElement => {
                   href={social.link}
                   key={index}
                   target='__blank'
-                  className='text-sm lg:text-xs font-semibold uppercase w-full underline transition-all pb-2'
+                  className='text-xs font-semibold uppercase w-full underline transition-all pb-2'
                 >
                   <span className={styles.connect__container}>
                     <span className={styles.connect__inner__container}>

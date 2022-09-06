@@ -61,8 +61,8 @@ const Preloader = ({ setLoading }: PreloaderProps): ReactElement => {
               style={{
                 height: '100%',
                 width: `${progress}%`,
-                backgroundColor: '#000',
-                transition: 'width 0.5s',
+                backgroundColor: '#eee',
+                transition: 'width 0.5s cubic-bezier(0.4, 1, 0.8, 1)',
               }}
             ></div>
             <motion.span
