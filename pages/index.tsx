@@ -42,6 +42,7 @@ const Home = () => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:url' content='https://kitts.xyz' />
+        <meta name='twitter:creator' content='@__kitts' />
         <meta property='twitter:title' content='Kitts | Folio' />
         <meta
           property='twitter:description'
