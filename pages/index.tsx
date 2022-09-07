@@ -36,7 +36,20 @@ const Home = () => {
           property='og:description'
           content='My business card that lives on the internet'
         />
-        <meta property='og:image' content='https://res.cloudinary.com/resagratia/image/upload/v1662559310/imgs/my_avatar_vk5vob.png' />
+        <meta
+          property='og:image'
+          content='https://res.cloudinary.com/resagratia/image/upload/v1662559310/imgs/my_avatar_vk5vob.png'
+        />
+        <meta name='twitter:card' content='summary' />
+        <meta name='twitter:title' content='Folio Homepage' />
+        <meta
+          name='twitter:description'
+          content='My business card that lives on the internet'
+        />
+        <meta
+          name='twitter:image'
+          content='https://res.cloudinary.com/resagratia/image/upload/v1662559310/imgs/my_avatar_vk5vob.png'
+        />
       </Head>
 
       <AnimatePresence>
