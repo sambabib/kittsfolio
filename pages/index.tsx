@@ -28,6 +28,16 @@ const Home = () => {
     <>
       <Head>
         <title>Kitts | Folio</title>
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta property='twitter:title' content='Folio Homepage' />
+        <meta
+          property='twitter:description'
+          content='My business card that lives on the internet'
+        />
+        <meta
+          property='twitter:image'
+          content='https://res.cloudinary.com/resagratia/image/upload/v1662559310/imgs/my_avatar_vk5vob.png'
+        />
         <meta property='og:url' content='kitts.xyz' />
         <meta property='og:type' content='Kitts Folio' />
         <meta property='og:title' content='Folio Homepage' />
@@ -37,16 +47,6 @@ const Home = () => {
         />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/resagratia/image/upload/v1662559310/imgs/my_avatar_vk5vob.png'
-        />
-        <meta property='twitter:card' content='summary_large_image' />
-        <meta property='twitter:title' content='Folio Homepage' />
-        <meta
-          property='twitter:description'
-          content='My business card that lives on the internet'
-        />
-        <meta
-          property='twitter:image'
           content='https://res.cloudinary.com/resagratia/image/upload/v1662559310/imgs/my_avatar_vk5vob.png'
         />
       </Head>
