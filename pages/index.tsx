@@ -39,14 +39,14 @@ const Home = () => {
           property='og:image'
           content='https://res.cloudinary.com/resagratia/image/upload/v1662559310/imgs/my_avatar_vk5vob.png'
         />
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='Folio Homepage' />
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:title' content='Folio Homepage' />
         <meta
-          name='twitter:description'
+          property='twitter:description'
           content='My business card that lives on the internet'
         />
         <meta
-          name='twitter:image'
+          property='twitter:image'
           content='https://res.cloudinary.com/resagratia/image/upload/v1662559310/imgs/my_avatar_vk5vob.png'
         />
       </Head>
