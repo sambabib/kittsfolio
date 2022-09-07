@@ -22,13 +22,21 @@ const Home = () => {
     return (): void => clearTimeout(timeout);
   }, []);
 
-  if (loading) return <Preloader setLoading={setLoading} />
+  if (loading) return <Preloader setLoading={setLoading} />;
 
   return (
     <>
       <Head>
-        <title>Kite | Folio</title>
-        <meta name='description' content='Kittsfolio Homepage' />
+        <title>Kitts | Folio</title>
+        <meta property='og:url' content='kitts.xyz' />
+        <meta property='og:type' content='Kitts Folio' />
+        <meta property='og:title' content='Folio Homepage' />
+        <meta name='twitter:card' content='Kitts Folio' />
+        <meta
+          property='og:description'
+          content='My business card that lives on the internet'
+        />
+        <meta property='og:image' content='https://res.cloudinary.com/resagratia/image/upload/v1662559310/imgs/my_avatar_vk5vob.png' />
       </Head>
 
       <AnimatePresence>
