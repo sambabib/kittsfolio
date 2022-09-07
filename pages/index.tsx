@@ -28,22 +28,34 @@ const Home = () => {
     <>
       <Head>
         <title>Kitts | Folio</title>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <meta name='title' content='Kitts | Folio' />
+        <meta
+          name='description'
+          content='Software Engineer with a business card that lives on the internet.'
+        />
+        <meta
+          property='og:image'
+          content='https://res.cloudinary.com/resagratia/image/upload/v1662559310/imgs/my_avatar_vk5vob.png'
+        />
+
         <meta name='twitter:card' content='summary_large_image' />
-        <meta property='twitter:title' content='Folio Homepage' />
+        <meta name='twitter:url' content='https://kitts.xyz' />
+        <meta property='twitter:title' content='Kitts | Folio' />
         <meta
           property='twitter:description'
-          content='My business card that lives on the internet'
+          content='Software Engineer with a business card that lives on the internet.'
         />
         <meta
           property='twitter:image'
           content='https://res.cloudinary.com/resagratia/image/upload/v1662559310/imgs/my_avatar_vk5vob.png'
         />
-        <meta property='og:url' content='kitts.xyz' />
-        <meta property='og:type' content='Kitts Folio' />
-        <meta property='og:title' content='Folio Homepage' />
+
+        <meta property='og:url' content='https://kitts.xyz' />
+        <meta property='og:title' content='Kitts | Folio' />
         <meta
           property='og:description'
-          content='My business card that lives on the internet'
+          content='Software Engineer with a business card that lives on the internet.'
         />
         <meta
           property='og:image'
