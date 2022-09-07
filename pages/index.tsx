@@ -38,6 +38,7 @@ const Home = () => {
           property='og:image'
           content='https://res.cloudinary.com/resagratia/image/upload/v1662559310/imgs/my_avatar_vk5vob.png'
         />
+        <meta property="og:type" content="website" />
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:url' content='https://kitts.xyz' />
