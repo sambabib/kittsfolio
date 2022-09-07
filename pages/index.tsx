@@ -31,7 +31,6 @@ const Home = () => {
         <meta property='og:url' content='kitts.xyz' />
         <meta property='og:type' content='Kitts Folio' />
         <meta property='og:title' content='Folio Homepage' />
-        <meta name='twitter:card' content='Kitts Folio' />
         <meta
           property='og:description'
           content='My business card that lives on the internet'
@@ -41,7 +40,6 @@ const Home = () => {
           content='https://res.cloudinary.com/resagratia/image/upload/v1662559310/imgs/my_avatar_vk5vob.png'
         />
         <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:creator' content='@__kitts' />
         <meta name='twitter:title' content='Folio Homepage' />
         <meta
           name='twitter:description'
