@@ -30,6 +30,12 @@ const Connect = (): ReactElement => {
                 Hashnode
               </a>
             </span>
+
+            <span className='text-sm lg:text-xs font-semibold uppercase w-full hover:underline transition-all pb-2'>
+              <a href='https://drive.google.com/file/d/1t6LkDw651j96DYIj4vElkJU2btJA9DQX/view?usp=sharing' target='__blank'>
+                Resume
+              </a>
+            </span>
           </div>
 
           <div className='border-t border-t-solid border-t-[#020a13] my-12 flex flex-col-reverse items-center md:flex md:flex-row md:justify-between'>

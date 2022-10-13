@@ -1,7 +1,7 @@
 // partials
 @import 'variable';
 
-@media (min-width: 768px) {
+@media (min-width: 969px) {
   .articles__card {
     width: 50%;
     
@@ -14,5 +14,11 @@
  @media (max-width: 620px) {
   .articles__card {
     width: 100%;
+  }
+ }
+
+ @media (min-width: 679px) and (max-width: 968px) {
+  .articles__card {
+    width: 100%!important;
   }
  }

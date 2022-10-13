@@ -23,8 +23,8 @@ const Articles = (): ReactElement => {
           </h3>
         </div>
 
-        <section>
-          <div className={cx('flex flex-row flex-wrap justify-between items-center', styles.articles)}>
+        <section className=''>
+          <div className={cx('flex flex-row flex-wrap justify-between items-center')}>
             {posts.map((post, index) => (
               <div key={index} className={styles.articles__card}>
                 <BlogPostsCard post={post} />

@@ -38,8 +38,39 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 678px) and (max-width: 1024px) {
   .project__grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+
+    .grid__card {
+      &:first-child {
+        height: 260px !important;
+      }
+  
+      &:nth-child(2) {
+        margin-top: 40px;
+        height: 300px !important;
+      }
+  
+      &:nth-child(3) {
+        margin-top: 40px !important;
+        height: 300px !important;
+      }
+  
+      &:nth-child(4) {
+        margin-top: 40px !important;
+        height: 300px !important;
+      }
+  
+      &:nth-child(5) {
+        margin-top: 40px !important;
+        height: 300px !important;
+      }
+
+      &:last-child {
+        margin-top: 40px !important;
+        height: 300px !important;
+      }
+    }
   }
 }
